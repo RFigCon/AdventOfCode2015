@@ -1,8 +1,8 @@
-static const string RES_PRESENT = "resources\\day2\\";
+static const string RES_PRESENT = "resources/day2/";
 
 class Presents{
     
-    private:
+private:
     int paper_total = 0;
     int ribbon_total = 0;
 
@@ -83,7 +83,7 @@ class Presents{
         return prst;
     }
 
-    public:
+public:
     static void write_answers(){
         Presents* presents = get_total("dimensions.txt");
         if(!presents) return;

@@ -1,6 +1,6 @@
 #include <set>
 
-static const string RES_ROUTE = "resources\\day3\\";
+static const string RES_ROUTE = "resources/day3/";
 
 class Route{
 

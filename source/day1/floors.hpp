@@ -1,7 +1,7 @@
-static const string RES_FLOORS = "resources\\day1\\";
+static const string RES_FLOORS = "resources/day1/";
 
 class Floors{
-    private:
+private:
     int floor = 0;
     int entered_basement = 0;
 
@@ -45,7 +45,7 @@ class Floors{
 
     }
 
-    public:
+public:
     static void write_answers(){
         Floors *floors = get_floor_and_basement("floor.txt");
         if(!floors) return;
