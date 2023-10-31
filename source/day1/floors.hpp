@@ -4,7 +4,7 @@
 #include <iostream>
 #endif
 
-static const std::string RES_FLOORS = "resources/day1/";
+static const std::string RES_DAY1 = "resources/day1/";
 
 class Floors{
 private:
@@ -14,7 +14,7 @@ private:
     static Floors* get_floor_and_basement(std::string file_name){
         
         std::ifstream file;
-        file.open(RES_FLOORS + file_name);
+        file.open(RES_DAY1 + file_name);
 
         Floors* result = new Floors();
 

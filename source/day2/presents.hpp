@@ -4,9 +4,8 @@
 #include <iostream>
 #endif
 
-namespace{
-    const std::string RES = "resources/day2/";
-}
+static const std::string RES_DAY2 = "resources/day2/";
+
 class Presents{
     
 private:
@@ -41,7 +40,7 @@ private:
     }
 
     static Presents* get_total(std::string file_name){
-        std::ifstream file (RES + file_name);
+        std::ifstream file (RES_DAY2 + file_name);
 
         if(!file.is_open()) return 0;
 
