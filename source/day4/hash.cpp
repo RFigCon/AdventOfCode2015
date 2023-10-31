@@ -1,6 +1,10 @@
-#include <iostream>
+
+#ifndef _GLOBAL_INC
 #include <fstream>
 #include <string>
+#include <iostream>
+#endif
+
 #include <sstream>
 
 #include <math.h>
@@ -8,7 +12,7 @@
 
 using namespace std;
 
-static const string RES_MD5 = "resources/day4/";
+static const string RES_DAY4 = "resources/day4/";
 
 
 //****************FOR DEBBUGING*********************
@@ -56,7 +60,7 @@ static void printhex(unsigned int hex){
 
 static string get_key_start(string file_name){
 
-    ifstream file(RES_MD5 + file_name);
+    ifstream file(RES_DAY4 + file_name);
 
     stringstream buff;
     buff << file.rdbuf();

@@ -1,13 +1,19 @@
-static const string RES_FLOORS = "resources/day1/";
+#ifndef _GLOBAL_INC
+#include <fstream>
+#include <string>
+#include <iostream>
+#endif
+
+static const std::string RES_FLOORS = "resources/day1/";
 
 class Floors{
 private:
     int floor = 0;
     int entered_basement = 0;
 
-    static Floors* get_floor_and_basement(string file_name){
+    static Floors* get_floor_and_basement(std::string file_name){
         
-        ifstream file;
+        std::ifstream file;
         file.open(RES_FLOORS + file_name);
 
         Floors* result = new Floors();
@@ -50,8 +56,8 @@ public:
         Floors *floors = get_floor_and_basement("floor.txt");
         if(!floors) return;
 
-        cout << "\t- Destination: floor " << floors->floor;
-        cout << "\n\t- Basement at step " << floors->entered_basement;
+        std::cout << "\t- Destination: floor " << floors->floor;
+        std::cout << "\n\t- Basement at step " << floors->entered_basement;
         delete floors;
     }
 };

@@ -1,5 +1,12 @@
-static const string RES_PRESENT = "resources/day2/";
+#ifndef _GLOBAL_INC
+#include <fstream>
+#include <string>
+#include <iostream>
+#endif
 
+namespace{
+    const std::string RES = "resources/day2/";
+}
 class Presents{
     
 private:
@@ -8,7 +15,7 @@ private:
 
     static const char DELIM = 'x';
 
-    static int find_end(string str, int start_idx){
+    static int find_end(std::string str, int start_idx){
 
         char c = str[start_idx];
         while(c!=DELIM && c!='\0'){
@@ -18,7 +25,7 @@ private:
         return start_idx;
     }
     
-    static int parse_int(string str, int start_idx, int end_idx){
+    static int parse_int(std::string str, int start_idx, int end_idx){
         int val = 0;
         for(int i = start_idx; i< end_idx; i++){
             val = val*10;
@@ -33,8 +40,8 @@ private:
         return third;
     }
 
-    static Presents* get_total(string file_name){
-        ifstream file (RES_PRESENT + file_name);
+    static Presents* get_total(std::string file_name){
+        std::ifstream file (RES + file_name);
 
         if(!file.is_open()) return 0;
 
@@ -88,7 +95,7 @@ public:
         Presents* presents = get_total("dimensions.txt");
         if(!presents) return;
 
-        cout << "\t- Total square feet of paper: " << presents->paper_total << "\n\t- Feet of ribbon: " << presents->ribbon_total;
+        std::cout << "\t- Total square feet of paper: " << presents->paper_total << "\n\t- Feet of ribbon: " << presents->ribbon_total;
         delete presents;
     }
 };

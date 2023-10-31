@@ -1,18 +1,25 @@
 #include <set>
 
-static const string RES_ROUTE = "resources/day3/";
+#ifndef _GLOBAL_INC
+#include <fstream>
+#include <string>
+#include <iostream>
+#endif
+
+static const std::string RES_DAY3 = "resources/day3/";
+
 
 class Route{
 
 private:
-    static int processBySanta(string file_name){
+    static int processBySanta(std::string file_name){
         
         int x_coor = 0;
         int y_coor = 0;
         std::set< std::pair<int, int> > places;
 
-        ifstream file;
-        file.open(RES_ROUTE + file_name);
+        std::ifstream file;
+        file.open(RES_DAY3 + file_name);
 
         if(!file.is_open()) return 0;
 
@@ -75,15 +82,15 @@ private:
         }
     }
 
-    static int processWithRobot(string file_name){
+    static int processWithRobot(std::string file_name){
         
         Coor santa = {0, 0};
         Coor robo = {0, 0};
         
         std::set< std::pair<int, int> > places;
 
-        ifstream file;
-        file.open(RES_ROUTE + file_name);
+        std::ifstream file;
+        file.open(RES_DAY3 + file_name);
 
         if(!file.is_open()) return 0;
 
@@ -116,10 +123,10 @@ private:
 public:
     static void write_answers(){
         int count = processBySanta("directions.txt");
-        cout << "\t- Number of houses visited (only Santa): " << count << endl;
+        std::cout << "\t- Number of houses visited (only Santa): " << count << std::endl;
 
         count = processWithRobot("directions.txt");
-        cout << "\t- Number of houses visited (with Robot): " << count << endl;
+        std::cout << "\t- Number of houses visited (with Robot): " << count << std::endl;
     }
 
 };
