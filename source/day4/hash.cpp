@@ -8,7 +8,12 @@
 #include <sstream>
 
 #include <math.h>
-#include <arpa/inet.h> //to use htohl() and ntohl()
+
+#if defined (_WIN64) || defined (_WIN32)
+    #include <winsock2.h>   //to use htohl() and ntohl()
+#else
+    #include <arpa/inet.h>  //to use htohl() and ntohl()
+#endif
 
 using namespace std;
 

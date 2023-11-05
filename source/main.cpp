@@ -20,7 +20,7 @@ int main(){
     Route::write_answers();
 
     std::cout << "\n----------------------------\n\tDay 4\n----------------------------\n";
-    //MD5::write_answers();
+    MD5::write_answers();
 
     std::cout << "\n----------------------------\n\tDay 5\n----------------------------\n";
     NiceStr::write_answers();
