@@ -8,7 +8,6 @@
 
 static const std::string RES_DAY3 = "resources/day3/";
 
-
 class Route{
 
 private:
