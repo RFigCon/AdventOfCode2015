@@ -8,6 +8,7 @@
 #include "day3/route.hpp"
 #include "day4/hash.cpp"
 #include "day5/nice_string.cpp"
+#include "day6/lights.cpp"
 
 int main(){
     std::cout << "----------------------------\n\tDay 1\n----------------------------\n";
@@ -20,9 +21,12 @@ int main(){
     Route::write_answers();
 
     std::cout << "\n----------------------------\n\tDay 4\n----------------------------\n";
-    MD5::write_answers();
+    //MD5::write_answers();
 
     std::cout << "\n----------------------------\n\tDay 5\n----------------------------\n";
     NiceStr::write_answers();
+
+    std::cout << "\n----------------------------\n\tDay 6\n----------------------------\n";
+    Lights::write_answers();
     return 0;
 }

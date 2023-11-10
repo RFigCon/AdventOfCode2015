@@ -1,13 +1,4 @@
-#ifndef _GLOBAL_INC
-#define _GLOBAL_INC
-#include <fstream>
-#include <string>
-#include <iostream>
-#endif
-
-#include <sstream>
-
-#include <math.h>
+#include "../global_in.hpp"
 
 #if defined (_WIN64) || defined (_WIN32)
     #include <winsock2.h>   //to use htohl() and ntohl()

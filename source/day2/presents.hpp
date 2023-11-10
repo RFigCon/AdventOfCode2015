@@ -1,9 +1,4 @@
-#ifndef _GLOBAL_INC
-#define _GLOBAL_INC
-#include <fstream>
-#include <string>
-#include <iostream>
-#endif
+#include "../global_in.hpp"
 
 static const std::string RES_DAY2 = "resources/day2/";
 
