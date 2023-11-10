@@ -1,4 +1,5 @@
 #ifndef _GLOBAL_INC
+#define _GLOBAL_INC
 #include <fstream>
 #include <string>
 #include <iostream>
