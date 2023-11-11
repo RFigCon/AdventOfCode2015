@@ -1,8 +1,8 @@
 #include "global_in.hpp"
 
-#include "day1/floors.hpp"
-#include "day2/presents.hpp"
-#include "day3/route.hpp"
+#include "day1/floors.cpp"
+#include "day2/presents.cpp"
+#include "day3/route.cpp"
 #include "day4/hash.cpp"
 #include "day5/nice_string.cpp"
 #include "day6/lights.cpp"
