@@ -10,50 +10,6 @@ using namespace std;
 
 static const string RES_DAY4 = "resources/day4/";
 
-
-//****************FOR DEBBUGING*********************
-static char get_hex_code(unsigned char val){
-    val = val & 0xF;
-    switch(val){
-        case 0xA:
-            return 'A';
-        case 0xB:
-            return 'B';
-        case 0xC:
-            return 'C';
-        case 0xD:
-            return 'D';
-        case 0xE:
-            return 'E';
-        case 0xF:
-            return 'F';
-        default:
-            return '0' + val;
-    }
-}
-
-static void printhex(basic_string<unsigned char> hex){
-
-    for(int i = 0; i<hex.size(); i++){
-        cout << get_hex_code( hex[i]>>4 );
-        cout << get_hex_code( hex[i]  ) << " ";
-    }
-    cout << endl;
-}
-
-static void printhex(unsigned int hex){
-
-    unsigned char mem[4];
-    *(unsigned int*)&mem[0] = hex;
-    for(int i = 0; i<4; i++){
-        cout << get_hex_code( mem[i]>>4 );
-        cout << get_hex_code( mem[i]  ) << " ";
-    }
-    cout << endl;
-}
-//**************************************************
-
-
 static string get_key_start(string file_name){
 
     ifstream file(RES_DAY4 + file_name);
