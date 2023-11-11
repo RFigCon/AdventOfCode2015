@@ -49,7 +49,7 @@ private:
 
 public:
     static void write_answers(){
-        Floors *floors = get_floor_and_basement("floor.txt");
+        Floors *floors = get_floor_and_basement("input.txt");
         if(!floors) return;
 
         std::cout << "\t- Destination: floor " << floors->floor;

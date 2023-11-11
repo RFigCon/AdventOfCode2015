@@ -246,7 +246,7 @@ static basic_string<unsigned char> md5_hash(basic_string<unsigned char> key){
 
 static unsigned int get_lowest_number(int zeroes){
     calcK();
-    string key_start = get_key_start("key.txt");
+    string key_start = get_key_start("input.txt");
     key_start.resize( key_start.size()-1 ); //remove new line character
 
     unsigned int result = 1;

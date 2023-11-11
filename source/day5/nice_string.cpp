@@ -160,7 +160,7 @@ static unsigned int* nice_str_in(std::string file_name){
 
 namespace NiceStr{
     void write_answers(){
-        unsigned int* ptr = nice_str_in("strings.txt");
+        unsigned int* ptr = nice_str_in("input.txt");
         std::cout << "\t- There are " << ptr[0] << " nice strings, according to the old rules!" << std::endl;
         std::cout << "\t- There are " << ptr[1] << " nice strings, according to the new rules!" << std::endl;
     }

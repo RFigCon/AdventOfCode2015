@@ -115,10 +115,10 @@ private:
 
 public:
     static void write_answers(){
-        int count = processBySanta("directions.txt");
+        int count = processBySanta("input.txt");
         std::cout << "\t- Number of houses visited (only Santa): " << count << std::endl;
 
-        count = processWithRobot("directions.txt");
+        count = processWithRobot("input.txt");
         std::cout << "\t- Number of houses visited (with Robot): " << count << std::endl;
     }
 

@@ -87,7 +87,7 @@ private:
 
 public:
     static void write_answers(){
-        Presents* presents = get_total("dimensions.txt");
+        Presents* presents = get_total("input.txt");
         if(!presents) return;
 
         std::cout << "\t- Total square feet of paper: " << presents->paper_total << "\n\t- Feet of ribbon: " << presents->ribbon_total;
