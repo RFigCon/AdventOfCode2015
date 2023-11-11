@@ -1,7 +1,4 @@
-#define _GLOBAL_INC
-#include <fstream>
-#include <string>
-#include <iostream>
+#include "global_in.hpp"
 
 #include "day1/floors.hpp"
 #include "day2/presents.hpp"
@@ -9,6 +6,7 @@
 #include "day4/hash.cpp"
 #include "day5/nice_string.cpp"
 #include "day6/lights.cpp"
+#include "day7/circuit.cpp"
 
 int main(){
     std::cout << "----------------------------\n\tDay 1\n----------------------------\n";
@@ -28,5 +26,8 @@ int main(){
 
     std::cout << "\n----------------------------\n\tDay 6\n----------------------------\n";
     Lights::write_answers();
+
+    std::cout << "\n----------------------------\n\tDay 7\n----------------------------\n";
+    Circuit::write_answers();
     return 0;
 }
