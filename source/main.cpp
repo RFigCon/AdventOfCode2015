@@ -7,6 +7,7 @@
 #include "day5/nice_string.cpp"
 #include "day6/lights.cpp"
 #include "day7/circuit.cpp"
+#include "day8/escape_char.cpp"
 
 int main(){
     std::cout << "----------------------------\n\tDay 1\n----------------------------\n";
@@ -29,5 +30,8 @@ int main(){
 
     std::cout << "\n----------------------------\n\tDay 7\n----------------------------\n";
     Circuit::write_answers();
+    
+    std::cout << "\n----------------------------\n\tDay 8\n----------------------------\n";
+    EscapeChars::write_answers();
     return 0;
 }
